@@ -59,7 +59,6 @@ body {
     height: 100%;
     mix-blend-mode: multiply;
     filter: brightness(1.2);
-    transition: all 0.5s ease-in;
 }
 
 /* Extra feature */
@@ -80,16 +79,11 @@ body {
                 0 0 15px #3efce8,
                 0 0 35px #3efce8;
     opacity: 0;
-    transition: all 0.5s ease-in;
+    transition: opacity 0.5s ease-in;
 }
-.card .img:hover {
-   background-color: #6e23a0;
-}
+
 .card .img:hover span{
     opacity: 1;
-}
-.card .img:hover img{
-    opacity: 0;
 }
 
 .card .content {

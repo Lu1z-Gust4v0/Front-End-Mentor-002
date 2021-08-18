@@ -26,12 +26,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Screenshot](images\component.png)
 
 ### Links
 
 - Solution URL: [Solution](style.css)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://lu1z-gust4v0.github.io/Front-End-Mentor-002/](https://lu1z-gust4v0.github.io/Front-End-Mentor-002/)
 
 ## My process
 
