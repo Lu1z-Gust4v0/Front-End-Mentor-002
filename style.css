@@ -1,0 +1,184 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root {
+    /* Colors */
+    --primary-normal: hsl(244, 38%, 16%);
+    --primary-bold: hsl(233, 47%, 7%);
+    --primary-accent: hsl(277, 64%, 61%);
+
+    /* Text colors */
+    --neutral-light: hsl(0, 0%, 100%);
+    --neutral-normal: hsl(0, 0%, 75%);
+    --neutral-bold: hsl(0, 0%, 60%);
+
+    /* Fonts */
+    --font-size: 15px;
+    --font-family-1: Inter, serif;
+    --font-family-2: Lexend Deca, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--primary-bold);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 700px;
+    width: 350px;
+    margin: 2em 1.5em;
+    background-color: var(--primary-normal);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card .img {
+    position: relative;
+    background-color: var(--primary-accent);
+    width: 100%;
+    height: 34%;
+    cursor: pointer;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    filter: brightness(1.2);
+    transition: all 0.5s ease-in;
+}
+
+/* Extra feature */
+
+.card .img span {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    inset: 0;
+    font-size: 1.25rem;
+    font-family: var(--font-family-2);
+    font-weight: 700;
+    color: #3efce8;
+    text-shadow: 0 0 10px #3efce8,
+                0 0 15px #3efce8,
+                0 0 35px #3efce8;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+.card .img:hover {
+   background-color: #6e23a0;
+}
+.card .img:hover span{
+    opacity: 1;
+}
+.card .img:hover img{
+    opacity: 0;
+}
+
+.card .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-basis: 100%;
+    padding: 1em 1.5em;
+}
+
+.content h2 {
+    text-align: center;
+    line-height: .9em;
+    font-size: 1.75rem;
+    font-family: var(--font-family-1);
+    font-weight: 700;
+    color: var(--neutral-light);
+}
+
+.content h2 span {
+    color: var(--primary-accent)
+}
+
+.content p {
+    text-align: center;
+    line-height: 1.5em;
+    font-size: .9rem;
+    font-family: var(--font-family-2);
+    font-weight: 400;
+    color: var(--neutral-normal)
+}
+
+.card .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 33%;
+    width: 100%;
+}
+
+.container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+    font-size: .7rem;
+    font-weight: 400;
+    font-family: var(--font-family-2);
+    color: var(--neutral-bold);
+}
+.container div span {
+    margin-bottom: .2em;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--neutral-light);
+    font-family: var(--font-family-1);
+}
+
+@media (min-width: 780px) {
+    .card {
+        width: 900px;
+        height: 350px;
+        flex-direction: row-reverse;
+    }
+
+    .card .img {
+        background-color: var(--primary-accent);
+        height: 100%;
+    }
+
+    .card .content {
+        height: 100%;
+        margin-top: 3em;
+        margin-right: 5em;
+        margin-left: 3em;
+    }
+    .content h2 {
+        text-align: start;
+        line-height: initial;
+    }
+    .content p {
+        text-align: start;
+    }
+    .content .container {
+        flex-direction: row;
+        margin-top: 1.5em;
+        padding-right: 1.5em;
+    }
+}
